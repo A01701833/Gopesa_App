@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--  UI DESIGN  -->
+    <title> GOPESA : ACERCA DE NOSOTROS  </title> <!--  TITULO  -->
+    <meta name="description" content="GOPESA Inmobiliaria"><!--  DESCRIPCION  -->
+    <meta name="keywords" content=" Inmobiliaria"><!--  PALABRAS CLAVE -->
+
+
+<!--  CSS  -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link rel="stylesheet" href= "{% static 'css/styles-merged.css' %}">
+<link rel="stylesheet" href= "{% static 'css/style.min.css' %}">
+<link rel="stylesheet" href= "{% static 'css/custom.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+    <!-- START: header -->
+
+    <div class="probootstrap-loader"></div>
+
+    <header role="banner" class="probootstrap-header">
+      <div class="container">
+          <a href="{% url 'gopesa_app:index'%}" class="probootstrap-logo"><img src="{%static 'img/logo.png' %}" alt="GOPESA LOGO" style="width:70%;"><span>.</span></a>
+
+          <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+          <div class="mobile-menu-overlay"></div>
+
+          <nav role="navigation" class="probootstrap-nav hidden-xs">
+            <ul class="probootstrap-main-nav">
+              <li ><a href="{% url 'gopesa_app:index'%}">INICIO</a></li>
+              <li><a href="{% url 'gopesa_app:properties'%}">Propiedades</a></li>
+            <!--  <li><a href="agents.php"></a></li> --> <!--  PROXIMAMENTE -->
+              <li class="active"><a href="{% url 'gopesa_app:about'%}">ACERCA DE NOSOTROS</a></li>
+              <li><a href="{% url 'gopesa_app:contact'%}">CONTACTO</a></li>
+            </ul>
+            <div class="extra-text visible-xs">
+              <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+              <h5>Address</h5>
+              <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+              <h5>Connect</h5>
+              <ul class="social-buttons">
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                <li><a href="#"><i class="icon-instagram2"></i></a></li>
+              </ul>
+            </div>
+          </nav>
+      </div>
+    </header>
+   <!-- END: header -->
+
+
+  <section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <div class="page-title probootstrap-animate">
+              <div class="probootstrap-breadcrumbs">
+                <a href="{%url 'gopesa_app:index'%}">INICIO</a><span>ACERCA DE NOSOTROS</span>
+              </div>
+              <h1>ACERCA DE NOSOTROS</h1>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url({%static 'img/slider_1.jpg'%});"></li>
+      <li style="background-image: url({%static 'img/slider_4.jpg'%});"></li>
+      <li style="background-image: url({%static 'img/slider_2.jpg'%});"></li>
+    </ul>
+  </section>
+  <!-- END: slider  -->
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row heading">
+        <div class="col-md-12"><h2 class="mt0 mb50 text-center">GOPESA Inmobiliaria</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p><img src="{%static 'img/logo.png'%}" class="img-responsive" alt=""></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>NUESTRA MISION</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+        </div>
+        <div class="col-md-6">
+          <h2>NUESTRA VISION</h2>
+          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-half">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url({%static 'img/slider_2.jpg'%});"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Conoce mas de nosotros</p>
+      <h3 class="mt0 mb40">Nuestra Historia</h3>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      <p class="mb50">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+    <!--  <p><a href="#" class="btn btn-primary mb10">Find out more</a></p> -->
+    </div>
+  </section>
+  <section class="probootstrap-half reverse">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url({%static 'img/slider_5.jpg'%});"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Porque Nosotros</p>
+      <h3 class="mt0 mb40">Servicio al cliente</h3>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      <p class="mb50">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+    </div>
+  </section>
+   <section class="probootstrap-half">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url({%static 'img/slider_1.jpg'%});"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle"></p>
+      <h3 class="mt0 mb40">Nuestros Logros</h3>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      <p class="mb50">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+    </div>
+  </section>
+
+  <section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">Miembros del Grupo</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_1.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Alan LLano</h2>
+              <p><small>Real Estate Brooker</small></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_2.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Arturo Borbolla</h2>
+              <p><small>Buying Agent</small></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_2.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Arturo Borbolla</h2>
+              <p><small>Buying Agent</small></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_2.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Arturo Borbolla</h2>
+              <p><small>Buying Agent</small></p>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_2.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Arturo Borbolla</h2>
+              <p><small>Buying Agent</small></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_2.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Arturo Borbolla</h2>
+              <p><small>Buying Agent</small></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_2.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Arturo Borbolla</h2>
+              <p><small>Buying Agent</small></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/person_2.jpg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Arturo Borbolla</h2>
+              <p><small>Buying Agent</small></p>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="probootstrap-footer probootstrap-bg" style="background-image: url({%static 'img/slider_3.jpg'%})">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">GOPESA INMOBILIARIA</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <p><a href="about.php">Read more...</a></p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading"></h4>
+            <ul class="stack-link">
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">Popular Cities</h4>
+            <ul class="stack-link">
+              <li><a href="#">New York <small>(320 properties)</small></a></li>
+              <li><a href="#">San Francisco <small>(294 properties)</small></a></li>
+              <li><a href="#">Brooklyn <small>(300 properties)</small></a></li>
+              <li><a href="#">Chicago <small>(268 properties)</small></a></li>
+              <li><a href="#">Los Angeles <small>(342 properties)</small></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+
+
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2018 <a href="#">GOPESA Inmobiliaria</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-footer-social">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+
+  <script src= '{% static "js/scripts.min.js" %}'></script>
+  <script src= ' {% static "js/main.min.js" %}'></script>
+  <script src= ' {%static "js/custom.js" %}'></script>
+
+  </body>
+</html>

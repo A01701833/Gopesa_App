@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--  UI DESIGN  -->
+  <title> GOPESA : EQUIPO </title> <!--  TITULO  -->
+  <meta name="description" content="GOPESA Inmobiliaria"><!--  DESCRIPCION  -->
+  <meta name="keywords" content=" Inmobiliaria"><!--  PALABRAS CLAVE -->
+
+
+<!--  CSS  -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link rel="stylesheet" href= "{% static 'css/styles-merged.css' %}">
+<link rel="stylesheet" href= "{% static 'css/style.min.css' %}">
+<link rel="stylesheet" href= "{% static 'css/custom.css' %}">
+  <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.min.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body>
+
+
+      <!-- START: header -->
+
+      <div class="probootstrap-loader"></div>
+
+      <header role="banner" class="probootstrap-header">
+        <div class="container">
+            <a href="{% url 'gopesa_app:index'%}" class="probootstrap-logo"><img src="{%static 'img/logo.png' %}" alt="GOPESA LOGO" style="width:70%;"><span>.</span></a>
+
+            <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+            <div class="mobile-menu-overlay"></div>
+
+            <nav role="navigation" class="probootstrap-nav hidden-xs">
+              <ul class="probootstrap-main-nav">
+                <li ><a href="{% url 'gopesa_app:index'%}">INICIO</a></li>
+                <li><a href="{% url 'gopesa_app:properties'%}">Propiedades</a></li>
+              <!--  <li class="active"><a href="agents.php"></a></li> --> <!--  PROXIMAMENTE -->
+                <li><a href="{% url 'gopesa_app:about'%}">ACERCA DE NOSOTROS</a></li>
+                <li><a href="{% url 'gopesa_app:contact'%}">CONTACTO</a></li>
+              </ul>
+              <div class="extra-text visible-xs">
+                <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+                <h5>Address</h5>
+                <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                <h5>Connect</h5>
+                <ul class="social-buttons">
+                  <li><a href="#"><i class="icon-twitter"></i></a></li>
+                  <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                  <li><a href="#"><i class="icon-instagram2"></i></a></li>
+                </ul>
+              </div>
+            </nav>
+        </div>
+      </header>
+     <!-- END: header -->
+  <section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <div class="page-title probootstrap-animate">
+              <div class="probootstrap-breadcrumbs">
+                <a href="{% url 'gopesa_app:index'%}">INICIO</a><span>PROPIEDADES</span><span>{{post.nombre}}</span>
+              </div>
+              <h1>{{post.descripcion}}</h1>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url({%static 'img/index_3.jpg' %});"></li>
+      <li style="background-image: url({%static 'img/index_3.jpg'%});"></li>
+      <li style="background-image: url({%static 'img/index_3.jpg'%});"></li>
+    </ul>
+  </section>
+  <!-- END: slider  -->
+
+  <section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">DETALLES</h2>
+      </div>
+      <div class="row">
+
+
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/flaticon/svg/012-field.svg'%}"class="img-responsive " alt="">
+
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Terreno</h2>
+              <p><small></small></p>
+              <p class="probootstrap-listing-price"> <strong>{{post.terreno}}</strong> m</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/flaticon/svg/010-bed.svg'%}"class="img-responsive " alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Cuartos</h2>
+              <p><small></small></p>
+              <p class="probootstrap-listing-price"> <strong>{{post.cuartos}}</strong> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/flaticon/svg/011-toilet.svg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Banos</h2>
+              <p><small></small></p>
+              <p class="probootstrap-listing-price"> <strong>{{post.banos}}</strong> </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/flaticon/svg/014-placeholder.svg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Ubicacion</h2>
+              <p><small></small></p>
+              <p class="probootstrap-listing-price"> <span>{{post.ubicacion}}</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/flaticon/svg/013-coin.svg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Precio</h2>
+              <p><small></small></p>
+              <p class="probootstrap-listing-price"> <strong>{{post.precio}}</strong> MXN </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="{%static 'img/flaticon/svg/015-tag.svg'%}" class="img-responsive" alt="">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Tipo</h2>
+              <p><small></small></p>
+              <p class="probootstrap-listing-price" style="text-transform: uppercase;"> <strong>{{post.tipo}}</strong> </p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-slider flexslider">
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url({%static 'propiedades/index_3.jpg' %});" class="overlay"></li>
+      <li style="background-image: url({%static 'propiedades/P1.jpg' %});" class="overlay"></li>
+      <li style="background-image: url({%static 'propiedades/P2.jpg' %});" class="overlay"></li>
+      <li style="background-image: url({%static 'propiedades/P3.jpg' %});" class="overlay"></li>
+      <li style="background-image: url({%static 'propiedades/P4.jpg' %});" class="overlay"></li>
+    </ul>
+  </section>
+
+
+
+  <section class="probootstrap-half reverse">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url({%static 'img/slider_5.jpg' %});"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Porque Nosotros</p>
+      <h3 class="mt0 mb40">Servicio al cliente</h3>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      <p class="mb50">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+      <p><a href="{%url 'gopesa_app:contact'%}" class="btn btn-primary mb10">Contactanos</a></p>
+    </div>
+  </section>
+
+  <footer class="probootstrap-footer probootstrap-bg" style="background-image: url({%static 'img/slider_3.jpg' %})">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">GOPESA INMOBILIARIA</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+
+
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2018 <a href="#">GOPESA Inmobiliaria</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-footer-social">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+
+
+  <script src= '{% static "js/scripts.min.js" %}'></script>
+  <script src= ' {% static "js/main.min.js" %}'></script>
+  <script src= ' {%static "js/custom.js" %}'></script>
+
+  </body>
+</html>
