@@ -10,9 +10,9 @@ from .models import Propiedades , Images
 
 # Create your views here.
 
-# MANTEINANCE VIEW 
+# MANTEINANCE VIEW
 
-def mantenimiento(request):
+def manteinance(request):
     return render(request,"gopesa_app/manteinance.html")
 
 # INDEX VIEW ( LANDING PAGE )
