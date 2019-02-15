@@ -12,8 +12,7 @@ from .models import Propiedades , Images
 
 # MANTEINANCE VIEW
 
-def manteinance(request):
-    return render(request,"gopesa_app/manteinance.html")
+
 
 # INDEX VIEW ( LANDING PAGE )
 def index(request):
@@ -32,7 +31,8 @@ def about(request):
 def contact(request):
     return render(request,"gopesa_app/contact.html")
 
-
+def manteinance(request):
+    return render(request,"gopesa_app/manteinance.html")
 #  PROPERTIES PAGE ( DISPLAYS LISTS OF PROPERTIES AVAILABLE.)
 def properties(request):
     properties_list = Propiedades.activo.all()
