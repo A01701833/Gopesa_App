@@ -10,6 +10,7 @@ app_name = 'gopesa_app'
 # URL PATTERNS FOR APPLICATION "GOPESA_APP"
 urlpatterns =[
     path('',views.index,name='index'),
+    path('manteinance/',views.mantenimiento,name='manteinance'),
     path('properties/',views.properties,name='properties'),
     path('about/',views.about,name='about'),
     path('contact/',views.contact,name='contact'),
